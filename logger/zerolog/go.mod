@@ -1,0 +1,29 @@
+module github.com/mimokpl/kratos-bootstrap/logger/zerolog
+
+go 1.25.0
+
+replace (
+	github.com/mimokpl/kratos-bootstrap/api => ../../api
+	github.com/mimokpl/kratos-bootstrap/logger => ../
+)
+
+require (
+	github.com/natefinch/lumberjack v2.0.0+incompatible
+	github.com/rs/zerolog v1.35.1
+	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/kratos-bootstrap/logger v0.1.3
+)
+
+require (
+	github.com/BurntSushi/toml v1.6.0 // indirect
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
+	github.com/mattn/go-colorable v0.1.15 // indirect
+	github.com/mattn/go-isatty v0.0.24 // indirect
+	go.opentelemetry.io/otel v1.46.0 // indirect
+	go.opentelemetry.io/otel/trace v1.46.0 // indirect
+	golang.org/x/sys v0.47.0 // indirect
+	google.golang.org/protobuf v1.36.12 // indirect
+	gopkg.in/natefinch/lumberjack.v2 v2.2.1 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
+)

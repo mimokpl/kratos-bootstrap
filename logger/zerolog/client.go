@@ -1,0 +1,88 @@
+package zerolog
+
+import (
+	"strings"
+
+	"github.com/rs/zerolog"
+
+	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
+	bLogger "github.com/mimokpl/kratos-bootstrap/logger"
+)
+
+func init() {
+	_ = bLogger.Register(bLogger.Zerolog, func(cfg *conf.Logger) (bLogger.Logger, error) {
+		return NewLogger(cfg)
+	})
+}
+
+// NewLogger 创建一个新的日志记录器 - Zerolog
+func NewLogger(cfg *conf.Logger) (bLogger.Logger, error) {
+	if cfg == nil || cfg.Zerolog == nil {
+		return nil, nil
+	}
+
+	// 根据配置设置全局级别（可选）
+	if lvl := cfg.Zerolog.Level; lvl != "" {
+		switch strings.ToLower(lvl) {
+		case "debug":
+			zerolog.SetGlobalLevel(zerolog.DebugLevel)
+		case "info":
+			zerolog.SetGlobalLevel(zerolog.InfoLevel)
+		case "warn", "warning":
+			zerolog.SetGlobalLevel(zerolog.WarnLevel)
+		case "error":
+			zerolog.SetGlobalLevel(zerolog.ErrorLevel)
+		case "fatal":
+			zerolog.SetGlobalLevel(zerolog.FatalLevel)
+		default:
+			// 未识别则保持默认
+		}
+	}
+
+	if cfg.Zerolog.TimeFieldFormat != "" {
+		zerolog.TimeFieldFormat = cfg.Zerolog.TimeFieldFormat
+	}
+	if cfg.Zerolog.TimestampFieldName != "" {
+		zerolog.TimestampFieldName = cfg.Zerolog.TimestampFieldName
+	}
+	if cfg.Zerolog.LevelFieldName != "" {
+		zerolog.LevelFieldName = cfg.Zerolog.LevelFieldName
+	}
+	if cfg.Zerolog.MessageFieldName != "" {
+		zerolog.MessageFieldName = cfg.Zerolog.MessageFieldName
+	}
+
+	kind := strings.ToLower(cfg.Zerolog.GetWriter())
+
+	var params map[string]any
+	if kind == "file" && (cfg.Zerolog.MaxSize != nil || cfg.Zerolog.MaxAge != nil ||
+		cfg.Zerolog.MaxBackups != nil || cfg.Zerolog.Compress != nil) {
+		// 配置了滚动参数时使用lumberjack滚动写入
+		kind = "lumberjack"
+		params = map[string]any{}
+		if cfg.Zerolog.MaxSize != nil {
+			params["maxSizeMB"] = int(cfg.Zerolog.GetMaxSize())
+		}
+		if cfg.Zerolog.MaxBackups != nil {
+			params["maxBackups"] = int(cfg.Zerolog.GetMaxBackups())
+		}
+		if cfg.Zerolog.MaxAge != nil {
+			params["maxAge"] = int(cfg.Zerolog.GetMaxAge())
+		}
+		if cfg.Zerolog.Compress != nil {
+			params["compress"] = cfg.Zerolog.GetCompress()
+		}
+	}
+
+	w, err := NewWriter(kind, cfg.Zerolog.GetFilename(), params)
+	if err != nil {
+		return nil, err
+	}
+
+	// 创建基础 zerolog.Logger
+	z := zerolog.New(w).With().Timestamp().Logger()
+
+	wrapped := NewZerologLogger(&z)
+
+	return wrapped, nil
+}

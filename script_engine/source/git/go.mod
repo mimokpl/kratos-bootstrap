@@ -1,0 +1,23 @@
+module github.com/mimokpl/kratos-bootstrap/script_engine/source/git
+
+go 1.24.6
+
+replace (
+	github.com/mimokpl/kratos-bootstrap/api => ../../../api
+	github.com/mimokpl/kratos-bootstrap/script_engine => ../../
+)
+
+require (
+	github.com/mimokpl/go-scripts v0.0.8
+	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/kratos-bootstrap/script_engine v0.0.7
+)
+
+require (
+	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
+	google.golang.org/protobuf v1.36.12 // indirect
+)
+
+// TODO: 当 go-scripts/source/git 发布后，添加以下依赖:
+// require github.com/mimokpl/go-scripts/source/git v0.0.0
+//	(以及 github.com/go-git/go-git/v6 等间接依赖)

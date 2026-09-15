@@ -1,0 +1,23 @@
+module github.com/mimokpl/kratos-bootstrap/logger/logrus
+
+go 1.25.0
+
+replace (
+	github.com/mimokpl/kratos-bootstrap/api => ../../api
+	github.com/mimokpl/kratos-bootstrap/logger => ../
+)
+
+require (
+	github.com/sirupsen/logrus v1.10.2
+	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/kratos-bootstrap/logger v0.1.3
+)
+
+require (
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
+	go.opentelemetry.io/otel v1.46.0 // indirect
+	go.opentelemetry.io/otel/trace v1.46.0 // indirect
+	golang.org/x/sys v0.47.0 // indirect
+	google.golang.org/protobuf v1.36.12 // indirect
+)

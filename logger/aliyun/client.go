@@ -1,0 +1,47 @@
+package aliyun
+
+import (
+	"errors"
+
+	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
+	bLogger "github.com/mimokpl/kratos-bootstrap/logger"
+)
+
+func init() {
+	_ = bLogger.Register(bLogger.Aliyun, func(cfg *conf.Logger) (bLogger.Logger, error) {
+		return NewLogger(cfg)
+	})
+}
+
+// NewLogger 创建一个新的日志记录器 - Aliyun
+func NewLogger(cfg *conf.Logger) (bLogger.Logger, error) {
+	if cfg == nil || cfg.Aliyun == nil {
+		return nil, nil
+	}
+
+	// basic validation of required fields
+	if cfg.Aliyun.Project == "" || cfg.Aliyun.Endpoint == "" || cfg.Aliyun.AccessKey == "" || cfg.Aliyun.AccessSecret == "" {
+		return nil, errors.New("aliyun config invalid")
+	}
+
+	aliyunOpts := []Option{
+		WithProject(cfg.Aliyun.Project),
+		WithEndpoint(cfg.Aliyun.Endpoint),
+		WithAccessKey(cfg.Aliyun.AccessKey),
+		WithAccessSecret(cfg.Aliyun.AccessSecret),
+	}
+	if cfg.Aliyun.Logstore != "" {
+		aliyunOpts = append(aliyunOpts, WithLogstore(cfg.Aliyun.Logstore))
+	}
+	if cfg.Aliyun.SecurityToken != "" {
+		aliyunOpts = append(aliyunOpts, WithSecurityToken(cfg.Aliyun.SecurityToken))
+	}
+
+	wrapped, err := NewAliyunLogger(aliyunOpts...)
+	if err != nil {
+		// creation failed, return nil so caller can fallback
+		return nil, err
+	}
+
+	return wrapped, nil
+}

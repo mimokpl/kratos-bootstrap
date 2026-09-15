@@ -1,0 +1,41 @@
+module github.com/mimokpl/kratos-bootstrap/config/consul
+
+go 1.26.0
+
+replace (
+	github.com/armon/go-metrics => github.com/hashicorp/go-metrics v0.4.1
+
+	github.com/mimokpl/kratos-bootstrap/api => ../../api
+	github.com/mimokpl/kratos-bootstrap/config => ../
+)
+
+require (
+	github.com/go-kratos/kratos/v2 v2.9.2
+	github.com/hashicorp/consul/api v1.34.4
+	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/kratos-bootstrap/config v0.2.3
+)
+
+require (
+	dario.cat/mergo v1.0.2 // indirect
+	github.com/armon/go-metrics v0.6.1 // indirect
+	github.com/fatih/color v1.19.0 // indirect
+	github.com/fsnotify/fsnotify v1.10.1 // indirect
+	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
+	github.com/hashicorp/errwrap v1.1.0 // indirect
+	github.com/hashicorp/go-cleanhttp v0.5.2 // indirect
+	github.com/hashicorp/go-hclog v1.6.3 // indirect
+	github.com/hashicorp/go-immutable-radix v1.3.1 // indirect
+	github.com/hashicorp/go-metrics v0.6.1 // indirect
+	github.com/hashicorp/go-multierror v1.1.1 // indirect
+	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
+	github.com/hashicorp/golang-lru v1.0.2 // indirect
+	github.com/hashicorp/serf v0.10.4 // indirect
+	github.com/mattn/go-colorable v0.1.15 // indirect
+	github.com/mattn/go-isatty v0.0.24 // indirect
+	github.com/mitchellh/go-homedir v1.1.0 // indirect
+	golang.org/x/exp v0.0.0-20260824195058-e88cd73687aa // indirect
+	golang.org/x/sys v0.47.0 // indirect
+	google.golang.org/protobuf v1.36.12 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
+)

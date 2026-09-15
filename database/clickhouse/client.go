@@ -1,0 +1,137 @@
+package clickhouse
+
+import (
+	"crypto/tls"
+	"errors"
+
+	"github.com/go-kratos/kratos/v2/log"
+	clickhouseCrud "github.com/mimokpl/go-crud/clickhouse"
+	tlsUtils "github.com/mimokpl/go-utils/tls"
+
+	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
+)
+
+func NewClient(logger log.Logger, cfg *conf.Bootstrap, opts ...clickhouseCrud.Option) (*clickhouseCrud.Client, error) {
+	if cfg.Data == nil || cfg.Data.Clickhouse == nil {
+		return nil, errors.New("clickhouse config is nil")
+	}
+
+	var options []clickhouseCrud.Option
+
+	if logger != nil {
+		options = append(options, clickhouseCrud.WithLogger(logger))
+	}
+	if cfg.Data.Clickhouse.Dsn != nil {
+		options = append(options, clickhouseCrud.WithDsn(cfg.Data.Clickhouse.GetDsn()))
+	}
+	if cfg.Data.Clickhouse.Addresses != nil {
+		options = append(options, clickhouseCrud.WithAddresses(cfg.Data.Clickhouse.GetAddresses()...))
+	}
+	if cfg.Data.Clickhouse.Database != nil {
+		options = append(options, clickhouseCrud.WithDatabase(cfg.Data.Clickhouse.GetDatabase()))
+	}
+	if cfg.Data.Clickhouse.Username != nil {
+		options = append(options, clickhouseCrud.WithUsername(cfg.Data.Clickhouse.GetUsername()))
+	}
+	if cfg.Data.Clickhouse.Password != nil {
+		options = append(options, clickhouseCrud.WithPassword(cfg.Data.Clickhouse.GetPassword()))
+	}
+	if cfg.Data.Clickhouse.Debug != nil {
+		options = append(options, clickhouseCrud.WithDebug(cfg.Data.Clickhouse.GetDebug()))
+	}
+	if cfg.Data.Clickhouse.MaxOpenConns != nil {
+		options = append(options, clickhouseCrud.WithMaxOpenConns(int(cfg.Data.Clickhouse.GetMaxOpenConns())))
+	}
+	if cfg.Data.Clickhouse.MaxIdleConns != nil {
+		options = append(options, clickhouseCrud.WithMaxIdleConns(int(cfg.Data.Clickhouse.GetMaxIdleConns())))
+	}
+
+	if cfg.Data.Clickhouse.Tls != nil {
+		var tlsCfg *tls.Config
+		var err error
+
+		if tlsCfg, err = loadServerTlsConfig(cfg.Server.Grpc.Tls); err != nil {
+			return nil, err
+		}
+
+		if tlsCfg != nil {
+			options = append(options, clickhouseCrud.WithTLSConfig(tlsCfg))
+		}
+	}
+
+	if cfg.Data.Clickhouse.GetCompressionMethod() != "" {
+		options = append(options, clickhouseCrud.WithCompressionMethod(cfg.Data.Clickhouse.GetCompressionMethod()))
+	}
+	if cfg.Data.Clickhouse.CompressionLevel != nil {
+		options = append(options, clickhouseCrud.WithCompressionLevel(int(cfg.Data.Clickhouse.GetCompressionLevel())))
+	}
+
+	if cfg.Data.Clickhouse.MaxCompressionBuffer != nil {
+		options = append(options, clickhouseCrud.WithMaxCompressionBuffer(int(cfg.Data.Clickhouse.GetMaxCompressionBuffer())))
+	}
+
+	if cfg.Data.Clickhouse.DialTimeout != nil {
+		options = append(options, clickhouseCrud.WithDialTimeout(cfg.Data.Clickhouse.GetDialTimeout().AsDuration()))
+	}
+	if cfg.Data.Clickhouse.ReadTimeout != nil {
+		options = append(options, clickhouseCrud.WithReadTimeout(cfg.Data.Clickhouse.GetReadTimeout().AsDuration()))
+	}
+	if cfg.Data.Clickhouse.ConnMaxLifetime != nil {
+		options = append(options, clickhouseCrud.WithConnMaxLifetime(cfg.Data.Clickhouse.GetConnMaxLifetime().AsDuration()))
+	}
+
+	if cfg.Data.Clickhouse.HttpProxy != nil {
+		options = append(options, clickhouseCrud.WithHttpProxy(cfg.Data.Clickhouse.GetHttpProxy()))
+	}
+
+	if cfg.Data.Clickhouse.ConnectionOpenStrategy != nil {
+		options = append(options, clickhouseCrud.WithConnectionOpenStrategy(cfg.Data.Clickhouse.GetConnectionOpenStrategy()))
+	}
+
+	if cfg.Data.Clickhouse.Scheme != nil {
+		options = append(options, clickhouseCrud.WithScheme(cfg.Data.Clickhouse.GetScheme()))
+	}
+
+	if cfg.Data.Clickhouse.BlockBufferSize != nil {
+		options = append(options, clickhouseCrud.WithBlockBufferSize(uint8(cfg.Data.Clickhouse.GetBlockBufferSize())))
+	}
+
+	if opts != nil {
+		options = append(options, opts...)
+	}
+
+	c, err := clickhouseCrud.NewClient(options...)
+
+	return c, err
+}
+
+func loadServerTlsConfig(cfg *conf.TLS) (*tls.Config, error) {
+	if cfg == nil {
+		return nil, nil
+	}
+
+	var tlsCfg *tls.Config
+	var err error
+
+	if cfg.File != nil {
+		if tlsCfg, err = tlsUtils.LoadServerTlsConfigFile(
+			cfg.File.GetKeyPath(),
+			cfg.File.GetCertPath(),
+			cfg.File.GetCaPath(),
+			cfg.InsecureSkipVerify,
+		); err != nil {
+			return nil, err
+		}
+	} else if cfg.Config != nil {
+		if tlsCfg, err = tlsUtils.LoadServerTlsConfigString(
+			cfg.Config.GetKeyPem(),
+			cfg.Config.GetCertPem(),
+			cfg.Config.GetCaPem(),
+			cfg.InsecureSkipVerify,
+		); err != nil {
+			return nil, err
+		}
+	}
+
+	return tlsCfg, err
+}
