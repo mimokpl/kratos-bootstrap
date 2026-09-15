@@ -6,7 +6,7 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 	go.opentelemetry.io/otel/trace v1.46.0
 )
 

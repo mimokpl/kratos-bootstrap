@@ -6,8 +6,8 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-crud/gorm v0.0.22
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/go-crud/gorm v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 )
 
 require (
@@ -71,15 +71,15 @@ require (
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/sirupsen/logrus v1.10.2 // indirect
 	github.com/tjfoc/gmsm v1.4.1 // indirect
-	github.com/mimokpl/go-crud/api v0.0.7 // indirect
-	github.com/mimokpl/go-crud/cache v0.0.1 // indirect
-	github.com/mimokpl/go-crud/pagination v0.0.15 // indirect
-	github.com/mimokpl/go-crud/viewer v0.0.6 // indirect
-	github.com/mimokpl/go-utils v1.1.40 // indirect
-	github.com/mimokpl/go-utils/mapper v0.0.3 // indirect
-	github.com/mimokpl/miwin v0.0.2 // indirect
-	github.com/mimokpl/miwin-plugins/encoding v0.0.1 // indirect
-	github.com/mimokpl/miwin-plugins/encoding/json v0.0.1 // indirect
+	github.com/mimokpl/go-crud/api v1.1.1 // indirect
+	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
+	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
+	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.1.1 // indirect
+	github.com/mimokpl/go-utils/mapper v1.1.1 // indirect
+	github.com/mimokpl/miwin v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
 	github.com/zeebo/xxh3 v1.1.0 // indirect
 	go.einride.tech/aip v0.86.3 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect

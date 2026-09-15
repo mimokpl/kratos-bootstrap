@@ -8,9 +8,9 @@ replace (
 )
 
 require (
-	github.com/mimokpl/go-scripts v0.0.8
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-bootstrap/script_engine v0.0.7
+	github.com/mimokpl/go-scripts v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/script_engine v1.1.1
 )
 
 require (
@@ -19,4 +19,4 @@ require (
 )
 
 // TODO: 当 go-scripts/source/consul 发布后，添加以下依赖:
-// require github.com/mimokpl/go-scripts/source/consul v0.0.0
+// require github.com/mimokpl/go-scripts/source/consul v1.1.1

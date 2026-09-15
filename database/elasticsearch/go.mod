@@ -6,8 +6,8 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-crud/elasticsearch v0.0.11
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/go-crud/elasticsearch v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 )
 
 require (
@@ -18,10 +18,10 @@ require (
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/gnostic v0.7.1 // indirect
 	github.com/google/gnostic-models v0.7.1 // indirect
-	github.com/mimokpl/go-crud/api v0.0.7 // indirect
-	github.com/mimokpl/miwin v0.0.2 // indirect
-	github.com/mimokpl/miwin-plugins/encoding v0.0.1 // indirect
-	github.com/mimokpl/miwin-plugins/encoding/json v0.0.1 // indirect
+	github.com/mimokpl/go-crud/api v1.1.1 // indirect
+	github.com/mimokpl/miwin v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/otel v1.46.0 // indirect
 	go.opentelemetry.io/otel/metric v1.46.0 // indirect

@@ -12,8 +12,8 @@ replace (
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/polarismesh/polaris-go v1.7.1
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-bootstrap/config v0.2.3
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/config v1.1.1
 )
 
 require (

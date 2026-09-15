@@ -6,11 +6,11 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.1.40
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-transport/broker v1.3.3
-	github.com/mimokpl/kratos-transport/broker/mqtt v1.3.6
-	github.com/mimokpl/kratos-transport/transport/mqtt v1.3.6
+	github.com/mimokpl/go-utils v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-transport/broker v1.1.1
+	github.com/mimokpl/kratos-transport/broker/mqtt v1.1.1
+	github.com/mimokpl/kratos-transport/transport/mqtt v1.1.1
 )
 
 require (
@@ -24,9 +24,9 @@ require (
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/mimokpl/kratos-transport/tracing v1.1.2 // indirect
-	github.com/mimokpl/kratos-transport/transport v1.3.4 // indirect
-	github.com/mimokpl/kratos-transport/transport/keepalive v1.3.5 // indirect
+	github.com/mimokpl/kratos-transport/tracing v1.1.1 // indirect
+	github.com/mimokpl/kratos-transport/transport v1.1.1 // indirect
+	github.com/mimokpl/kratos-transport/transport/keepalive v1.1.1 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/otel v1.46.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.46.0 // indirect

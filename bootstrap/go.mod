@@ -16,13 +16,13 @@ require (
 	github.com/olekukonko/tablewriter v1.1.4
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.12.1
-	github.com/mimokpl/go-utils v1.1.40
-	github.com/mimokpl/go-utils/id v0.0.6
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-bootstrap/config v0.2.3
-	github.com/mimokpl/kratos-bootstrap/logger v0.1.3
-	github.com/mimokpl/kratos-bootstrap/registry v0.2.3
-	github.com/mimokpl/kratos-bootstrap/tracer v0.1.5
+	github.com/mimokpl/go-utils v1.1.1
+	github.com/mimokpl/go-utils/id v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/config v1.1.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
+	github.com/mimokpl/kratos-bootstrap/registry v1.1.1
+	github.com/mimokpl/kratos-bootstrap/tracer v1.1.1
 	golang.org/x/tools v0.49.0
 	google.golang.org/protobuf v1.36.12
 )

@@ -10,8 +10,8 @@ replace (
 require (
 	github.com/natefinch/lumberjack v2.0.0+incompatible
 	github.com/rs/zerolog v1.35.1
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-bootstrap/logger v0.1.3
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
 )
 
 require (

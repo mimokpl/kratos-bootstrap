@@ -10,8 +10,8 @@ require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/google/uuid v1.6.0
 	github.com/gorilla/handlers v1.5.2
-	github.com/mimokpl/go-utils v1.1.40
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/go-utils v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 	google.golang.org/grpc v1.83.2
 	google.golang.org/protobuf v1.36.12
 )

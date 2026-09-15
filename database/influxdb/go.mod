@@ -6,8 +6,8 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-crud/influxdb v0.0.14
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
+	github.com/mimokpl/go-crud/influxdb v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 )
 
 require (
@@ -21,12 +21,12 @@ require (
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.29 // indirect
-	github.com/mimokpl/go-crud/api v0.0.7 // indirect
-	github.com/mimokpl/go-crud/pagination v0.0.15 // indirect
-	github.com/mimokpl/go-utils v1.1.40 // indirect
-	github.com/mimokpl/miwin v0.0.2 // indirect
-	github.com/mimokpl/miwin-plugins/encoding v0.0.1 // indirect
-	github.com/mimokpl/miwin-plugins/encoding/json v0.0.1 // indirect
+	github.com/mimokpl/go-crud/api v1.1.1 // indirect
+	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.1.1 // indirect
+	github.com/mimokpl/miwin v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
 	github.com/zeebo/xxh3 v1.1.0 // indirect
 	go.einride.tech/aip v0.86.3 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect

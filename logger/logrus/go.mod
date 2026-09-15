@@ -9,8 +9,8 @@ replace (
 
 require (
 	github.com/sirupsen/logrus v1.10.2
-	github.com/mimokpl/kratos-bootstrap/api v0.0.45
-	github.com/mimokpl/kratos-bootstrap/logger v0.1.3
+	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
 )
 
 require (
