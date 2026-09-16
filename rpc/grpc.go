@@ -10,7 +10,6 @@ import (
 	"github.com/go-kratos/aegis/ratelimit/bbr"
 	"github.com/go-kratos/kratos/v2/middleware/selector"
 	"google.golang.org/grpc"
-	"google.golang.org/grpc/keepalive"
 
 	"github.com/go-kratos/kratos/v2/log"
 	"github.com/go-kratos/kratos/v2/registry"
@@ -46,7 +45,7 @@ func CreateGrpcClient(ctx context.Context, r registry.Discovery, serviceName str
 
 	cfgs, err := initGrpcClientConfig(cfg, mds...)
 	if err != nil {
-		log.Errorf("init grpc client config failed: %s", err.Error())
+		log.Fatalf("init grpc client config failed: %s", err.Error())
 		return nil, err
 	}
 
@@ -54,7 +53,7 @@ func CreateGrpcClient(ctx context.Context, r registry.Discovery, serviceName str
 
 	conn, err := kratosGrpc.DialInsecure(ctx, options...)
 	if err != nil {
-		log.Errorf("dial grpc client [%s] failed: %s", serviceName, err.Error())
+		log.Fatalf("dial grpc client [%s] failed: %s", serviceName, err.Error())
 	}
 
 	return conn, nil
@@ -114,7 +113,7 @@ func CreateGrpcServer(cfg *conf.Bootstrap, mds ...middleware.Middleware) (*krato
 
 	cfgs, err := initGrpcServerConfig(cfg, mds...)
 	if err != nil {
-		log.Errorf("init grpc server config failed: %s", err.Error())
+		log.Fatalf("init grpc server config failed: %s", err.Error())
 		return nil, err
 	}
 
@@ -174,66 +173,14 @@ func initGrpcServerConfig(cfg *conf.Bootstrap, mds ...middleware.Middleware) ([]
 		}
 	}
 
-	in := cfg.Server.Grpc
-
-	if in.Network != "" {
-		options = append(options, kratosGrpc.Network(in.Network))
+	if cfg.Server.Grpc.Network != "" {
+		options = append(options, kratosGrpc.Network(cfg.Server.Grpc.Network))
 	}
-	if in.Addr != "" {
-		options = append(options, kratosGrpc.Address(in.Addr))
+	if cfg.Server.Grpc.Addr != "" {
+		options = append(options, kratosGrpc.Address(cfg.Server.Grpc.Addr))
 	}
-	if in.Timeout != nil {
-		options = append(options, kratosGrpc.Timeout(in.Timeout.AsDuration()))
-	}
-
-	if in.DisableReflection != nil && in.GetDisableReflection() {
-		options = append(options, kratosGrpc.DisableReflection())
-	}
-
-	var grpcOpts []grpc.ServerOption
-
-	if in.ConnectionTimeout.AsDuration() > 0 {
-		grpcOpts = append(grpcOpts, grpc.ConnectionTimeout(in.GetConnectionTimeout().AsDuration()))
-	}
-
-	keepaliveParams := keepalive.ServerParameters{}
-	kpChanged := false
-	if in.GetMaxConnectionIdle().AsDuration() > 0 {
-		keepaliveParams.MaxConnectionIdle = in.GetMaxConnectionIdle().AsDuration()
-		kpChanged = true
-	}
-	if in.GetMaxConnectionAge().AsDuration() > 0 {
-		keepaliveParams.MaxConnectionAge = in.GetMaxConnectionAge().AsDuration()
-		kpChanged = true
-	}
-	if in.GetMaxConnectionAgeGrace().AsDuration() > 0 {
-		keepaliveParams.MaxConnectionAgeGrace = in.GetMaxConnectionAgeGrace().AsDuration()
-		kpChanged = true
-	}
-	if in.GetKeepaliveTime().AsDuration() > 0 {
-		keepaliveParams.Time = in.GetKeepaliveTime().AsDuration()
-		kpChanged = true
-	}
-	if in.GetKeepaliveTimeout().AsDuration() > 0 {
-		keepaliveParams.Timeout = in.GetKeepaliveTimeout().AsDuration()
-		kpChanged = true
-	}
-	if kpChanged {
-		grpcOpts = append(grpcOpts, grpc.KeepaliveParams(keepaliveParams))
-	}
-
-	if in.MaxRecvMsgSize != nil && in.GetMaxRecvMsgSize() > 0 {
-		grpcOpts = append(grpcOpts, grpc.MaxRecvMsgSize(int(in.GetMaxRecvMsgSize())))
-	}
-	if in.MaxSendMsgSize != nil && in.GetMaxSendMsgSize() > 0 {
-		grpcOpts = append(grpcOpts, grpc.MaxSendMsgSize(int(in.GetMaxSendMsgSize())))
-	}
-	if in.MaxConcurrentStreams != nil && in.GetMaxConcurrentStreams() > 0 {
-		grpcOpts = append(grpcOpts, grpc.MaxConcurrentStreams(uint32(in.GetMaxConcurrentStreams())))
-	}
-
-	if len(grpcOpts) > 0 {
-		options = append(options, kratosGrpc.Options(grpcOpts...))
+	if cfg.Server.Grpc.Timeout != nil {
+		options = append(options, kratosGrpc.Timeout(cfg.Server.Grpc.Timeout.AsDuration()))
 	}
 
 	return options, nil
