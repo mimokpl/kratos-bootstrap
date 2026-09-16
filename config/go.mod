@@ -1,21 +1,20 @@
 module github.com/mimokpl/kratos-bootstrap/config
 
-go 1.25.0
+go 1.24.6
 
-replace github.com/mimokpl/kratos-bootstrap/api => ../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	google.golang.org/protobuf v1.36.12
+	github.com/mimokpl/kratos-bootstrap/api v0.0.43
+	google.golang.org/protobuf v1.36.11
 )
 
 require (
 	dario.cat/mergo v1.0.2 // indirect
-	github.com/fsnotify/fsnotify v1.10.1 // indirect
+	github.com/fsnotify/fsnotify v1.9.0 // indirect
 	github.com/kr/text v0.2.0 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	golang.org/x/sync v0.19.0 // indirect
-	golang.org/x/sys v0.47.0 // indirect
+	golang.org/x/sys v0.39.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
