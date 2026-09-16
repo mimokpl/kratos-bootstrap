@@ -66,8 +66,8 @@ import (
     "log"
     "time"
 
-    conf "github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1"
-    "github.com/tx7do/kratos-bootstrap/tracer"
+    conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
+    "github.com/mimokpl/kratos-bootstrap/tracer"
 )
 
 func main() {
@@ -127,8 +127,8 @@ package myexporter
 import (
     "context"
     traceSdk "go.opentelemetry.io/otel/sdk/trace"
-    conf "github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1"
-    "github.com/tx7do/kratos-bootstrap/tracer"
+    conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
+    "github.com/mimokpl/kratos-bootstrap/tracer"
 )
 
 func init() {

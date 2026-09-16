@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"sync"
-	"time"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/attribute"
@@ -95,12 +94,7 @@ func NewTracerProviderWithShutdown(ctx context.Context, cfg *conf.Tracer, appInf
 		if err != nil {
 			return nil, nil, err
 		}
-		if bo := cfg.GetBatcherOptions(); bo != nil && !bo.GetEnabled() {
-			// 显式关闭批处理时使用同步导出
-			opts = append(opts, traceSdk.WithSyncer(exp))
-		} else {
-			opts = append(opts, traceSdk.WithBatcher(exp, buildBatchSpanProcessorOptions(bo)...))
-		}
+		opts = append(opts, traceSdk.WithBatcher(exp))
 	}
 
 	tp := traceSdk.NewTracerProvider(opts...)
@@ -159,25 +153,4 @@ func NewCompositePropagator(enableTraceContext, enableBaggage bool) propagation.
 	default:
 		return propagation.NewCompositeTextMapPropagator(parts...)
 	}
-}
-
-// buildBatchSpanProcessorOptions 从配置构造批处理Span处理器选项.
-func buildBatchSpanProcessorOptions(bo *conf.BatcherOptions) []traceSdk.BatchSpanProcessorOption {
-	if bo == nil {
-		return nil
-	}
-	var batchOpts []traceSdk.BatchSpanProcessorOption
-	if bo.MaxQueueSize > 0 {
-		batchOpts = append(batchOpts, traceSdk.WithMaxQueueSize(int(bo.GetMaxQueueSize())))
-	}
-	if bo.MaxExportBatchSize > 0 {
-		batchOpts = append(batchOpts, traceSdk.WithMaxExportBatchSize(int(bo.GetMaxExportBatchSize())))
-	}
-	if bo.ScheduleDelayMillis > 0 {
-		batchOpts = append(batchOpts, traceSdk.WithBatchTimeout(time.Duration(bo.GetScheduleDelayMillis())*time.Millisecond))
-	}
-	if bo.ExportTimeoutMillis > 0 {
-		batchOpts = append(batchOpts, traceSdk.WithExportTimeout(time.Duration(bo.GetExportTimeoutMillis())*time.Millisecond))
-	}
-	return batchOpts
 }
