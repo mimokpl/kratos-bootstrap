@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package conf;
 
-option go_package = "github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1;conf";
+option go_package = "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1;conf";
 
 // 通知消息
 message Notification {
