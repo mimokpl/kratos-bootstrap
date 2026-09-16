@@ -31,6 +31,6 @@ func TestBootstrapWithNameVersion(t *testing.T) {
 }
 
 func TestNewInstanceId(t *testing.T) {
-	instanceId := NewInstanceId("miwin-test-service", "1.0.0", "127.0.0.1", "8000")
+	instanceId := NewInstanceId("gowind-test-service", "1.0.0", "127.0.0.1", "8000")
 	t.Logf("InstanceId: %s", instanceId)
 }

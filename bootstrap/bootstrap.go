@@ -18,8 +18,7 @@ import (
 func NewApp(ctx *Context, srv ...transport.Server) *kratos.App {
 	var opts []kratos.Option
 	if ctx.logger != nil {
-		// 项目 Logger 通过 AsKratosLogger 适配为 Kratos log.Logger
-		opts = append(opts, kratos.Logger(bLogger.AsKratosLogger(ctx.logger)))
+		opts = append(opts, kratos.Logger(ctx.logger))
 	}
 	if ctx.registrar != nil {
 		opts = append(opts, kratos.Registrar(ctx.registrar))

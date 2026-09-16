@@ -16,10 +16,10 @@ import (
 )
 
 const (
-	defaultProject = "miwin"
+	defaultProject = "gowind"
 	defaultAppName = "Unknown Service"
 	defaultAppId   = "unknown-service"
-	defaultName    = "Miwin Unknown Service"
+	defaultName    = "GoWind Unknown Service"
 	defaultVersion = "1.0.0"
 )
 
