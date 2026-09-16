@@ -179,10 +179,6 @@ func (r *Registry) registerWithKV(ctx context.Context, key string, value string)
 	return grant.ID, nil
 }
 
-// heartBeatRetryCooldown is the sleep between exhausted re-registration
-// bursts in heartBeat.
-var heartBeatRetryCooldown = 30 * time.Second
-
 func (r *Registry) heartBeat(ctx context.Context, leaseID clientv3.LeaseID, key string, value string) {
 	curLeaseID := leaseID
 	kac, err := r.client.KeepAlive(ctx, leaseID)
@@ -194,58 +190,44 @@ func (r *Registry) heartBeat(ctx context.Context, leaseID clientv3.LeaseID, key 
 
 	for {
 		if curLeaseID == 0 {
-			// try to registerWithKV in bursts of maxRetry attempts; between
-			// bursts cool down for 30s and try again — never give up while the
-			// context is alive. Previously the heartbeat returned permanently
-			// once a single burst exhausted maxRetry (a ~30s window), so an
-			// etcd restart outlasting that window left the still-running
-			// service de-registered forever.
-			for {
+			// try to registerWithKV
+			var retreat []int
+			for retryCnt := 0; retryCnt < r.opts.maxRetry; retryCnt++ {
 				if ctx.Err() != nil {
 					return
 				}
-				registered := false
-				var retreat []int
-				for retryCnt := 0; retryCnt < r.opts.maxRetry; retryCnt++ {
-					// prevent infinite blocking
-					idChan := make(chan clientv3.LeaseID, 1)
-					errChan := make(chan error, 1)
-					cancelCtx, cancel := context.WithCancel(ctx)
-					go func() {
-						defer cancel()
-						id, registerErr := r.registerWithKV(cancelCtx, key, value)
-						if registerErr != nil {
-							errChan <- registerErr
-						} else {
-							idChan <- id
-						}
-					}()
-
-					select {
-					case <-time.After(3 * time.Second):
-						cancel()
-						continue
-					case <-errChan:
-						continue
-					case curLeaseID = <-idChan:
+				// prevent infinite blocking
+				idChan := make(chan clientv3.LeaseID, 1)
+				errChan := make(chan error, 1)
+				cancelCtx, cancel := context.WithCancel(ctx)
+				go func() {
+					defer cancel()
+					id, registerErr := r.registerWithKV(cancelCtx, key, value)
+					if registerErr != nil {
+						errChan <- registerErr
+					} else {
+						idChan <- id
 					}
+				}()
 
-					kac, err = r.client.KeepAlive(ctx, curLeaseID)
-					if err == nil {
-						registered = true
-						break
-					}
-					curLeaseID = 0
-					retreat = append(retreat, 1<<retryCnt)
-					time.Sleep(time.Duration(retreat[rnd.Intn(len(retreat))]) * time.Second)
+				select {
+				case <-time.After(3 * time.Second):
+					cancel()
+					continue
+				case <-errChan:
+					continue
+				case curLeaseID = <-idChan:
 				}
-				if registered || ctx.Err() != nil {
+
+				kac, err = r.client.KeepAlive(ctx, curLeaseID)
+				if err == nil {
 					break
 				}
-				// burst exhausted: cool down before the next burst
-				time.Sleep(heartBeatRetryCooldown)
+				retreat = append(retreat, 1<<retryCnt)
+				time.Sleep(time.Duration(retreat[rnd.Intn(len(retreat))]) * time.Second)
 			}
-			if ctx.Err() != nil {
+			if _, ok := <-kac; !ok {
+				// retry failed
 				return
 			}
 		}
