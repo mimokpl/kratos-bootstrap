@@ -148,7 +148,7 @@ const file_conf_v1_kratos_conf_notify_proto_rawDesc = "" +
 	"\raccess_key_id\x18\x03 \x01(\tR\vaccessKeyId\x12*\n" +
 	"\x11access_key_secret\x18\x04 \x01(\tR\x0faccessKeySecretB\x06\n" +
 	"\x04_smsB\x87\x01\n" +
-	"\bcom.confB\x15KratosConfNotifyProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\x15KratosConfNotifyProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_kratos_conf_notify_proto_rawDescOnce sync.Once

@@ -219,7 +219,7 @@ const file_conf_v1_kratos_conf_client_proto_rawDesc = "" +
 	"\x03tls\x18\x03 \x01(\v2\t.conf.TLSR\x03tlsB\a\n" +
 	"\x05_restB\a\n" +
 	"\x05_grpcB\x87\x01\n" +
-	"\bcom.confB\x15KratosConfClientProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\x15KratosConfClientProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_kratos_conf_client_proto_rawDescOnce sync.Once

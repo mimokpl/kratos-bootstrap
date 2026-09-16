@@ -258,7 +258,7 @@ const file_conf_v1_kratos_conf_tracer_proto_rawDesc = "" +
 	"\x15max_export_batch_size\x18\x03 \x01(\rR\x12maxExportBatchSize\x122\n" +
 	"\x15schedule_delay_millis\x18\x04 \x01(\rR\x13scheduleDelayMillis\x122\n" +
 	"\x15export_timeout_millis\x18\x05 \x01(\rR\x13exportTimeoutMillisB\x87\x01\n" +
-	"\bcom.confB\x15KratosConfTracerProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\x15KratosConfTracerProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_kratos_conf_tracer_proto_rawDescOnce sync.Once

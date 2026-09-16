@@ -365,7 +365,7 @@ const file_conf_v1_kratos_conf_middleware_proto_rawDesc = "" +
 	"\acounter\x18\x02 \x01(\bR\acounter\x12\x14\n" +
 	"\x05gauge\x18\x03 \x01(\bR\x05gauge\x12\x18\n" +
 	"\asummary\x18\x04 \x01(\bR\asummaryB\x8b\x01\n" +
-	"\bcom.confB\x19KratosConfMiddlewareProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\x19KratosConfMiddlewareProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_kratos_conf_middleware_proto_rawDescOnce sync.Once

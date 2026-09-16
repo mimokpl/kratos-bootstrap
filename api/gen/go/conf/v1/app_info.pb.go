@@ -275,7 +275,7 @@ const file_conf_v1_app_info_proto_rawDesc = "" +
 	"\bEndpoint\x12\x12\n" +
 	"\x04kind\x18\x01 \x01(\tR\x04kind\x12\x18\n" +
 	"\aaddress\x18\x02 \x01(\tR\aaddressB~\n" +
-	"\bcom.confB\fAppInfoProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\fAppInfoProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_app_info_proto_rawDescOnce sync.Once

@@ -577,7 +577,7 @@ const file_conf_v1_kratos_conf_script_proto_rawDesc = "" +
 	"\x04EXPR\x10\a\x12\f\n" +
 	"\bSTARLARK\x10\b\x12\a\n" +
 	"\x03TCL\x10\tB\x87\x01\n" +
-	"\bcom.confB\x15KratosConfScriptProtoP\x01Z4github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
+	"\bcom.confB\x15KratosConfScriptProtoP\x01Z4github.com/tx7do/kratos-bootstrap/api/gen/go/conf/v1\xa2\x02\x03CXX\xaa\x02\x04Conf\xca\x02\x04Conf\xe2\x02\x10Conf\\GPBMetadata\xea\x02\x04Confb\x06proto3"
 
 var (
 	file_conf_v1_kratos_conf_script_proto_rawDescOnce sync.Once
