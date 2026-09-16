@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"sync"
 
+	"github.com/go-kratos/kratos/v2/log"
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 )
 
-type FactoryFunc func(cfg *conf.Logger) (Logger, error)
+type FactoryFunc func(cfg *conf.Logger) (log.Logger, error)
 
 var (
 	factoryMu sync.RWMutex
