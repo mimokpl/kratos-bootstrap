@@ -21,7 +21,6 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/gorilla/mux v1.8.1 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0 // indirect
-	github.com/kr/text v0.2.0 // indirect
 	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/mimokpl/kratos-transport/broker v1.9.2 // indirect
 	github.com/mimokpl/kratos-transport/tracing v1.9.2 // indirect

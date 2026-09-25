@@ -4,8 +4,8 @@ github.com/go-kratos/kratos/v3 v3.0.0 h1:dCXqKoeo2Bo9jgC72YfuwJ3g7bPCkHeVeNGyZQ5
 github.com/go-kratos/kratos/v3 v3.0.0/go.mod h1:8l+0M5UPlm/5hWLvS+wzxHRVRv6sHMG6Lgb4+rw1KIs=
 github.com/google/go-cmp v0.7.0 h1:wk8382ETsv4JYUZwIsn6YpYiWiBsYLSJiTsyBybVuN8=
 github.com/google/go-cmp v0.7.0/go.mod h1:pXiqmnSA92OHEEa9HXL2W4E7lf9JzCmGVUdgjX3N/iU=
-github.com/mimokpl/go-utils v1.9.1 h1:3JuHRNz+zpG0UbBSbM4ddxN0E1LMdWJcOImpHMaem5U=
-github.com/mimokpl/go-utils v1.9.1/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
+github.com/mimokpl/go-utils v1.9.2 h1:aFMPDmCeFOqOfop8JAhTnm+C5fpM50bM5oroIpBPbCE=
+github.com/mimokpl/go-utils v1.9.2/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
 github.com/stretchr/testify v1.12.1 h1:EuwCh5fleGS7H32xRwO3wRGT7DxrDhLAT6FF8MpWDWE=
 github.com/stretchr/testify v1.12.1/go.mod h1:MDEgiDPPsNp5cuIrHPPCyornHKgEVbtFUmoNlxoYthg=
 go.opentelemetry.io/otel v1.46.0 h1:FHt5/CDyVxi/8IM1CH7VE/rRgq3kLHa2mSTVMO8AWyc=

@@ -15,7 +15,6 @@ import "conf/v1/kratos_conf_config.proto";
 import "conf/v1/kratos_conf_notify.proto";
 import "conf/v1/kratos_conf_authn.proto";
 import "conf/v1/kratos_conf_authz.proto";
-import "conf/v1/kratos_conf_script.proto";
 import "conf/v1/kratos_conf_ai.proto";
 
 // 引导信息
@@ -31,6 +30,5 @@ message Bootstrap {
   optional Notification notify = 9;
   optional Authentication authn = 10;
   optional Authorization authz = 11;
-  optional Script script = 12;
   optional AI ai = 13;
 }

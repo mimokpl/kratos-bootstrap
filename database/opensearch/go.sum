@@ -14,8 +14,8 @@ github.com/mimokpl/go-crud/opensearch v1.1.1 h1:deGwUIKMnBFAMw9R4Hs8TEqyRM/TbC6t
 github.com/mimokpl/go-crud/opensearch v1.1.1/go.mod h1:1ByvjjPfwJEu7m4UCVYo44U/4mVn7WO8llUl2DdUw+Y=
 github.com/mimokpl/go-crud/pagination v1.1.1 h1:/sHuX0gj2AXsBGtFxowk9vwylPxTxeFmWhQQF86BJVI=
 github.com/mimokpl/go-crud/pagination v1.1.1/go.mod h1:GLCoZyum/hElWv4BCcedH66PstyWJafbqQdUWHEeR5o=
-github.com/mimokpl/go-utils v1.9.1 h1:3JuHRNz+zpG0UbBSbM4ddxN0E1LMdWJcOImpHMaem5U=
-github.com/mimokpl/go-utils v1.9.1/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
+github.com/mimokpl/go-utils v1.9.2 h1:aFMPDmCeFOqOfop8JAhTnm+C5fpM50bM5oroIpBPbCE=
+github.com/mimokpl/go-utils v1.9.2/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
 github.com/mimokpl/miwin v1.1.1 h1:CMcSMJoNCyPRvGAMmFoeqM/yQm0/GSR0Y2T9O0yOtZ4=
 github.com/mimokpl/miwin v1.1.1/go.mod h1:ks93yOnlsk3dN2rolRMduiuSLPSsnC5XAkXENU6Pe+A=
 github.com/mimokpl/miwin-plugins/encoding v1.1.1 h1:lKo+19RqIVEuqYbXjNYkdjVcBkCxHZYkMIXmrOSImUA=

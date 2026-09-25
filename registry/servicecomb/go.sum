@@ -41,8 +41,8 @@ github.com/kisielk/errcheck v1.2.0/go.mod h1:/BMXB+zMLi60iA8Vv6Ksmxu/1UDYcXs4uQL
 github.com/kisielk/errcheck v1.5.0/go.mod h1:pFxgyoBC7bSaBwPgfKdkLd5X25qrDl4LWUI2bnpBCr8=
 github.com/kisielk/gotool v1.0.0/go.mod h1:XhKaO+MFFWcvkIS/tQcRk01m1F5IRFswLeQ+oQHNcck=
 github.com/leodido/go-urn v1.2.1/go.mod h1:zt4jvISO2HfUBqxjfIshjdMTYS56ZS/qv49ictyFfxY=
-github.com/mimokpl/go-utils v1.9.1 h1:3JuHRNz+zpG0UbBSbM4ddxN0E1LMdWJcOImpHMaem5U=
-github.com/mimokpl/go-utils v1.9.1/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
+github.com/mimokpl/go-utils v1.9.2 h1:aFMPDmCeFOqOfop8JAhTnm+C5fpM50bM5oroIpBPbCE=
+github.com/mimokpl/go-utils v1.9.2/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
 github.com/patrickmn/go-cache v2.1.0+incompatible h1:HRMgzkcYKYpi3C8ajMPV8OFXaaRUnok+kx1WdO15EQc=
 github.com/patrickmn/go-cache v2.1.0+incompatible/go.mod h1:3Qf8kWWT7OJRJbdiICTKqZju1ZixQ/KpMGzzAfe6+WQ=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=

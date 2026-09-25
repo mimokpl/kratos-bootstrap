@@ -32,10 +32,10 @@ github.com/mimokpl/go-crud/pagination v1.1.1 h1:/sHuX0gj2AXsBGtFxowk9vwylPxTxeFm
 github.com/mimokpl/go-crud/pagination v1.1.1/go.mod h1:GLCoZyum/hElWv4BCcedH66PstyWJafbqQdUWHEeR5o=
 github.com/mimokpl/go-crud/viewer v1.1.1 h1:V1o32oC1D5sFOJrAF/a060cmnhozv92FinNqzYZXjp0=
 github.com/mimokpl/go-crud/viewer v1.1.1/go.mod h1:AfziEX1p0JV3/kUvTjYusxMubg97c538q4OoyWorCJY=
-github.com/mimokpl/go-utils v1.9.1 h1:3JuHRNz+zpG0UbBSbM4ddxN0E1LMdWJcOImpHMaem5U=
-github.com/mimokpl/go-utils v1.9.1/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
-github.com/mimokpl/go-utils/mapper v1.9.1 h1:gT6zNF9Zbq7U0Nj0L6ELwKNDZ4+4zLhFGfhoSOycJYk=
-github.com/mimokpl/go-utils/mapper v1.9.1/go.mod h1:5UTRsRYaohataFFSl9Wm7o2WvRSAmKTXsWOQHZOTiTI=
+github.com/mimokpl/go-utils v1.9.2 h1:aFMPDmCeFOqOfop8JAhTnm+C5fpM50bM5oroIpBPbCE=
+github.com/mimokpl/go-utils v1.9.2/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
+github.com/mimokpl/go-utils/mapper v1.9.2 h1:uwjnwpJBBQD89WRFIswlUpaCOp11VZU7/IMrkY+QdJA=
+github.com/mimokpl/go-utils/mapper v1.9.2/go.mod h1:5UTRsRYaohataFFSl9Wm7o2WvRSAmKTXsWOQHZOTiTI=
 github.com/mimokpl/miwin v1.1.1 h1:CMcSMJoNCyPRvGAMmFoeqM/yQm0/GSR0Y2T9O0yOtZ4=
 github.com/mimokpl/miwin v1.1.1/go.mod h1:ks93yOnlsk3dN2rolRMduiuSLPSsnC5XAkXENU6Pe+A=
 github.com/mimokpl/miwin-plugins/encoding v1.1.1 h1:lKo+19RqIVEuqYbXjNYkdjVcBkCxHZYkMIXmrOSImUA=
