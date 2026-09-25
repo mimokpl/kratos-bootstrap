@@ -2,6 +2,7 @@ package logger
 
 import (
 	"context"
+	"log/slog"
 
 	"github.com/go-kratos/kratos/v2/log"
 )
@@ -176,4 +177,59 @@ func FromKratosLogger(l log.Logger) Logger {
 		return nopLogger{}
 	}
 	return &kratosWrapper{l: l}
+}
+
+// ============================================================================
+// Forward 适配器：项目 Logger → *slog.Logger（供 kratos v3 使用）
+// ============================================================================
+
+// slogAdapter 将项目 Logger 适配为 slog.Handler。
+type slogAdapter struct {
+	l     Logger
+	attrs []any
+}
+
+var _ slog.Handler = (*slogAdapter)(nil)
+
+func (h *slogAdapter) Enabled(context.Context, slog.Level) bool { return true }
+
+func (h *slogAdapter) Handle(ctx context.Context, r slog.Record) error {
+	kvs := make([]any, 0, len(h.attrs)+r.NumAttrs()*2)
+	kvs = append(kvs, h.attrs...)
+	r.Attrs(func(a slog.Attr) bool {
+		kvs = append(kvs, a.Key, a.Value.Any())
+		return true
+	})
+	switch {
+	case r.Level >= slog.LevelError:
+		h.l.Error(ctx, r.Message, kvs...)
+	case r.Level >= slog.LevelWarn:
+		h.l.Warn(ctx, r.Message, kvs...)
+	case r.Level >= slog.LevelInfo:
+		h.l.Info(ctx, r.Message, kvs...)
+	default:
+		h.l.Debug(ctx, r.Message, kvs...)
+	}
+	return nil
+}
+
+func (h *slogAdapter) WithAttrs(attrs []slog.Attr) slog.Handler {
+	next := &slogAdapter{l: h.l, attrs: append([]any{}, h.attrs...)}
+	for _, a := range attrs {
+		next.attrs = append(next.attrs, a.Key, a.Value.Any())
+	}
+	return next
+}
+
+func (h *slogAdapter) WithGroup(string) slog.Handler { return h }
+
+// AsSlogLogger 将项目 Logger 适配为 *slog.Logger（用于 kratos v3 的 App）。
+func AsSlogLogger(l Logger) *slog.Logger {
+	if l == nil {
+		return slog.Default()
+	}
+	if s, ok := l.(*stdLogger); ok && s.l != nil {
+		return s.l
+	}
+	return slog.New(&slogAdapter{l: l})
 }

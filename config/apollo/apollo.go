@@ -6,8 +6,8 @@ import (
 	"github.com/apolloconfig/agollo/v4"
 	apolloconfig "github.com/apolloconfig/agollo/v4/env/config"
 
-	"github.com/go-kratos/kratos/v2/config"
-	"github.com/go-kratos/kratos/v2/encoding"
+	"github.com/go-kratos/kratos/v3/config"
+	"github.com/go-kratos/kratos/v3/encoding"
 	"github.com/go-kratos/kratos/v2/log"
 )
 

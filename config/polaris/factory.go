@@ -3,7 +3,7 @@ package polaris
 import (
 	"fmt"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/go-kratos/kratos/v2/log"
 
 	polaris "github.com/polarismesh/polaris-go"

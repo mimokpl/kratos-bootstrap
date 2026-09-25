@@ -1,7 +1,7 @@
 package bootstrap
 
 import (
-	"github.com/go-kratos/kratos/v2"
+	"github.com/go-kratos/kratos/v3"
 )
 
 // InitAppFunc 应用初始化函数类型

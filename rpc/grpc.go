@@ -6,24 +6,21 @@ import (
 	"strings"
 	"time"
 
-	"github.com/go-kratos/aegis/ratelimit"
-	"github.com/go-kratos/aegis/ratelimit/bbr"
-	"github.com/go-kratos/kratos/v2/middleware/selector"
+	"github.com/go-kratos/kratos/v3/middleware/selector"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/keepalive"
 
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/go-kratos/kratos/v3/registry"
 
-	"github.com/go-kratos/kratos/v2/middleware"
-	"github.com/go-kratos/kratos/v2/middleware/metadata"
-	midRateLimit "github.com/go-kratos/kratos/v2/middleware/ratelimit"
-	"github.com/go-kratos/kratos/v2/middleware/recovery"
-	"github.com/go-kratos/kratos/v2/middleware/tracing"
+	"github.com/go-kratos/kratos/v3/middleware"
+	"github.com/go-kratos/kratos/v3/middleware/metadata"
+	"github.com/go-kratos/kratos/v3/middleware/recovery"
+	"github.com/go-kratos/kratos/contrib/otel/v3/tracing"
 
 	"github.com/mimokpl/kratos-bootstrap/rpc/middleware/validate"
 
-	kratosGrpc "github.com/go-kratos/kratos/v2/transport/grpc"
+	kratosGrpc "github.com/go-kratos/kratos/v3/transport/grpc"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 )
@@ -52,7 +49,7 @@ func CreateGrpcClient(ctx context.Context, r registry.Discovery, serviceName str
 
 	options = append(options, cfgs...)
 
-	conn, err := kratosGrpc.DialInsecure(ctx, options...)
+	conn, err := kratosGrpc.NewClient(ctx, options...)
 	if err != nil {
 		log.Errorf("dial grpc client [%s] failed: %s", serviceName, err.Error())
 	}
@@ -145,14 +142,7 @@ func initGrpcServerConfig(cfg *conf.Bootstrap, mds ...middleware.Middleware) ([]
 		}
 		if cfg.Server.Grpc.Middleware.GetEnableCircuitBreaker() {
 		}
-		if cfg.Server.Grpc.Middleware.Limiter != nil {
-			var limiter ratelimit.Limiter
-			switch cfg.Server.Grpc.Middleware.Limiter.GetName() {
-			case "bbr":
-				limiter = bbr.NewLimiter()
-			}
-			ms = append(ms, midRateLimit.Server(midRateLimit.WithLimiter(limiter)))
-		}
+		// NOTE: v3 ratelimit.Limiter 与 aegis 不兼容，限流中间件暂未接入
 		if cfg.Server.Grpc.Middleware.GetEnableMetadata() {
 			ms = append(ms, metadata.Server())
 		}

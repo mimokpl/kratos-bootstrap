@@ -9,8 +9,8 @@ replace (
 
 require (
 	github.com/aliyun/aliyun-log-go-sdk v0.1.127
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
 	google.golang.org/protobuf v1.36.12
 )
 

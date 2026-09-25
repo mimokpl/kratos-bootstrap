@@ -9,8 +9,8 @@ replace (
 
 require (
 	github.com/mimokpl/go-scripts v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/script_engine v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/script_engine v1.9.0
 )
 
 require (

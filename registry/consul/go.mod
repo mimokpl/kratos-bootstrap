@@ -13,8 +13,8 @@ require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/hashicorp/consul/api v1.34.4
 	github.com/stretchr/testify v1.11.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/registry v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/registry v1.9.0
 	google.golang.org/protobuf v1.36.12
 )
 
@@ -37,7 +37,7 @@ require (
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
-	github.com/mimokpl/go-utils v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.9.0 // indirect
 	golang.org/x/exp v0.0.0-20260824195058-e88cd73687aa // indirect
 	golang.org/x/sys v0.47.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect

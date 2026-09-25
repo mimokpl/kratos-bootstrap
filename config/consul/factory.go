@@ -1,7 +1,7 @@
 package consul
 
 import (
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/go-kratos/kratos/v2/log"
 
 	consulApi "github.com/hashicorp/consul/api"

@@ -2,7 +2,7 @@ package eureka
 
 import (
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/go-kratos/kratos/v3/registry"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 	baseRegistry "github.com/mimokpl/kratos-bootstrap/registry"

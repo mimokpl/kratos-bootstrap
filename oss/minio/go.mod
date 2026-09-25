@@ -6,9 +6,9 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
+	github.com/mimokpl/go-utils v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
 	github.com/minio/minio-go/v7 v7.3.0
-	github.com/mimokpl/go-utils v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
 )
 
 require (

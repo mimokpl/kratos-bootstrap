@@ -4,7 +4,7 @@ import (
 	"context"
 	"testing"
 
-	"github.com/go-kratos/kratos/v2"
+	"github.com/go-kratos/kratos/v3"
 	"github.com/stretchr/testify/assert"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"

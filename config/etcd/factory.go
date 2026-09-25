@@ -5,7 +5,7 @@ import (
 
 	"time"
 
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/go-kratos/kratos/v2/log"
 	"google.golang.org/grpc/backoff"
 	"google.golang.org/grpc/credentials/insecure"

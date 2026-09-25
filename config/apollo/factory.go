@@ -1,7 +1,7 @@
 package apollo
 
 import (
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 	bConfig "github.com/mimokpl/kratos-bootstrap/config"

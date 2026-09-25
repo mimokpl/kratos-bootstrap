@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/go-kratos/kratos/v3/registry"
 
 	polarisApi "github.com/polarismesh/polaris-go/api"
 	polarisModel "github.com/polarismesh/polaris-go/pkg/model"

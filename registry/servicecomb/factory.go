@@ -4,7 +4,7 @@ import (
 	"time"
 
 	"github.com/go-kratos/kratos/v2/log"
-	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/go-kratos/kratos/v3/registry"
 
 	servicecombRbac "github.com/go-chassis/cari/rbac"
 	servicecombClient "github.com/go-chassis/sc-client"

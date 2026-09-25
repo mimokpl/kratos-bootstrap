@@ -10,8 +10,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/credentials v1.20.1
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.109.1
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/go-utils v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
 )
 
 require (

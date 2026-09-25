@@ -5,7 +5,7 @@ import (
 	"sort"
 	"sync"
 
-	"github.com/go-kratos/kratos/v2/registry"
+	"github.com/go-kratos/kratos/v3/registry"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 )

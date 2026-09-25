@@ -1,7 +1,7 @@
 package nacos
 
 import (
-	"github.com/go-kratos/kratos/v2/config"
+	"github.com/go-kratos/kratos/v3/config"
 	"github.com/go-kratos/kratos/v2/log"
 
 	nacosClients "github.com/nacos-group/nacos-sdk-go/v2/clients"

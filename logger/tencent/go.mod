@@ -9,8 +9,8 @@ replace (
 
 require (
 	github.com/tencentcloud/tencentcloud-cls-sdk-go v1.0.15
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
 	google.golang.org/protobuf v1.36.12
 )
 

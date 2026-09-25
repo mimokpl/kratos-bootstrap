@@ -8,12 +8,12 @@ require (
 	entgo.io/ent v0.14.6
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/entgo v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
 )
 
 require (
 	ariga.io/atlas v1.3.0 // indirect
-	github.com/XSAM/otelsql v0.43.0 // indirect
+	github.com/XSAM/otelsql v0.44.0 // indirect
 	github.com/agext/levenshtein v1.2.3 // indirect
 	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 	github.com/apparentlymart/go-textseg/v17 v17.0.1 // indirect
@@ -28,17 +28,17 @@ require (
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/hashicorp/hcl/v2 v2.24.0 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
-	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
-	github.com/redis/go-redis/v9 v9.22.0 // indirect
 	github.com/mimokpl/go-crud/api v1.1.1 // indirect
 	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
 	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
 	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
-	github.com/mimokpl/go-utils v1.1.1 // indirect
-	github.com/mimokpl/go-utils/mapper v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.9.0 // indirect
+	github.com/mimokpl/go-utils/mapper v1.9.0 // indirect
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
+	github.com/mitchellh/go-wordwrap v1.0.1 // indirect
+	github.com/redis/go-redis/v9 v9.22.0 // indirect
 	github.com/zclconf/go-cty v1.19.0 // indirect
 	github.com/zclconf/go-cty-yaml v1.2.0 // indirect
 	go.einride.tech/aip v0.86.3 // indirect
@@ -53,8 +53,8 @@ require (
 	golang.org/x/sys v0.47.0 // indirect
 	golang.org/x/text v0.41.0 // indirect
 	golang.org/x/tools v0.49.0 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20260825221802-da73d73af1c5 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20260908043556-f8649ddbbfe6 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260908043556-f8649ddbbfe6 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

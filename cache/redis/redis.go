@@ -1,11 +1,12 @@
 package redis
 
 import (
+	"context"
 	"crypto/tls"
 	"errors"
 	"strings"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 
 	"github.com/redis/go-redis/extra/redisotel/v9"
 	"github.com/redis/go-redis/v9"
@@ -46,14 +47,14 @@ func NewClient(conf *conf.Data, logger *log.Helper) (rdb *redis.Client) {
 	}
 
 	if tlsCfg, err := loadTlsConfig(in.GetTls()); err != nil {
-		logger.Errorf("failed load tls config: %s", err.Error())
+		logger.Errorf(context.Background(), "failed load tls config: %s", err.Error())
 		return nil
 	} else if tlsCfg != nil {
 		opts.TLSConfig = tlsCfg
 	}
 
 	if rdb = redis.NewClient(opts); rdb == nil {
-		logger.Errorf("failed opening connection to redis")
+		logger.Errorf(context.Background(), "failed opening connection to redis")
 		return nil
 	}
 
@@ -159,14 +160,14 @@ func instrument(in *conf.Data_Redis, cli redis.UniversalClient, logger *log.Help
 	// open tracing instrumentation.
 	if in.GetEnableTracing() {
 		if err := redisotel.InstrumentTracing(cli); err != nil {
-			logger.Errorf("failed open tracing: %s", err.Error())
+			logger.Errorf(context.Background(), "failed open tracing: %s", err.Error())
 		}
 	}
 
 	// open metrics instrumentation.
 	if in.GetEnableMetrics() {
 		if err := redisotel.InstrumentMetrics(cli); err != nil {
-			logger.Errorf("failed open metrics: %s", err.Error())
+			logger.Errorf(context.Background(), "failed open metrics: %s", err.Error())
 		}
 	}
 }

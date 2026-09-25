@@ -13,8 +13,8 @@ require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/nacos-group/nacos-sdk-go/v2 v2.3.5
 	github.com/stretchr/testify v1.11.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/registry v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/registry v1.9.0
 	google.golang.org/protobuf v1.36.12
 )
 
@@ -63,7 +63,7 @@ require (
 	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
 	github.com/tjfoc/gmsm v1.4.1 // indirect
-	github.com/mimokpl/go-utils v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.9.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.28.0 // indirect

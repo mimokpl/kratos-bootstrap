@@ -4,8 +4,8 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/go-kratos/kratos/v2/config"
-	fileKratos "github.com/go-kratos/kratos/v2/config/file"
+	"github.com/go-kratos/kratos/v3/config"
+	fileKratos "github.com/go-kratos/kratos/v3/config/file"
 	"github.com/go-kratos/kratos/v2/log"
 
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"

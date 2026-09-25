@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/go-kratos/kratos/v2"
-	"github.com/go-kratos/kratos/v2/transport"
+	"github.com/go-kratos/kratos/v3"
+	"github.com/go-kratos/kratos/v3/transport"
 
 	bConfig "github.com/mimokpl/kratos-bootstrap/config"
 	bLogger "github.com/mimokpl/kratos-bootstrap/logger"
@@ -18,8 +18,8 @@ import (
 func NewApp(ctx *Context, srv ...transport.Server) *kratos.App {
 	var opts []kratos.Option
 	if ctx.logger != nil {
-		// 项目 Logger 通过 AsKratosLogger 适配为 Kratos log.Logger
-		opts = append(opts, kratos.Logger(bLogger.AsKratosLogger(ctx.logger)))
+		// 项目 Logger 通过 AsSlogLogger 适配为 kratos v3 的 *slog.Logger
+		opts = append(opts, kratos.Logger(bLogger.AsSlogLogger(ctx.logger)))
 	}
 	if ctx.registrar != nil {
 		opts = append(opts, kratos.Registrar(ctx.registrar))

@@ -9,8 +9,8 @@ replace (
 
 require (
 	github.com/fluent/fluent-logger-golang v1.10.1
-	github.com/mimokpl/kratos-bootstrap/api v1.1.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.1.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
 )
 
 require (
