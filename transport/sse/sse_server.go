@@ -3,7 +3,7 @@ package sse
 import (
 	"crypto/tls"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 
 	tlsUtils "github.com/mimokpl/go-utils/tls"
 	"github.com/mimokpl/kratos-transport/transport/sse"

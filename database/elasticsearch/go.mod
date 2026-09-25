@@ -7,7 +7,7 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/elasticsearch v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 )
 
 require (
@@ -19,6 +19,7 @@ require (
 	github.com/google/gnostic v0.7.1 // indirect
 	github.com/google/gnostic-models v0.7.1 // indirect
 	github.com/mimokpl/go-crud/api v1.1.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
@@ -29,3 +30,5 @@ require (
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

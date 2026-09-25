@@ -4,13 +4,13 @@ go 1.25.8
 
 replace (
 	github.com/mimokpl/kratos-bootstrap/api => ../../api
-	github.com/mimokpl/kratos-bootstrap/logger => ../
+	github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger
 )
 
 require (
 	github.com/aliyun/aliyun-log-go-sdk v0.1.127
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	google.golang.org/protobuf v1.36.12
 )
 

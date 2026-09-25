@@ -3,7 +3,7 @@ package kafka
 import (
 	"crypto/tls"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	kafkaGo "github.com/segmentio/kafka-go"
 
 	tlsUtils "github.com/mimokpl/go-utils/tls"

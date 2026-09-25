@@ -5,7 +5,7 @@ go 1.25.3
 replace (
 	github.com/mimokpl/kratos-bootstrap/api => ../api
 	github.com/mimokpl/kratos-bootstrap/config => ../config
-	github.com/mimokpl/kratos-bootstrap/logger => ../logger
+	github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger
 	github.com/mimokpl/kratos-bootstrap/registry => ../registry
 	github.com/mimokpl/kratos-bootstrap/tracer => ../tracer
 )
@@ -13,13 +13,13 @@ replace (
 require (
 	github.com/go-kratos/kratos/v3 v3.0.0
 	github.com/google/subcommands v1.2.0
-	github.com/mimokpl/go-utils v1.9.0
-	github.com/mimokpl/go-utils/id v1.9.0
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/config v1.9.0
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
-	github.com/mimokpl/kratos-bootstrap/registry v1.9.0
-	github.com/mimokpl/kratos-bootstrap/tracer v1.9.0
+	github.com/mimokpl/go-utils v1.9.1
+	github.com/mimokpl/go-utils/id v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/config v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/registry v1.9.1
+	github.com/mimokpl/kratos-bootstrap/tracer v1.9.1
 	github.com/olekukonko/tablewriter v1.1.4
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.12.1
@@ -35,7 +35,6 @@ require (
 	github.com/clipperhouse/uax29/v2 v2.7.0 // indirect
 	github.com/fatih/color v1.19.0 // indirect
 	github.com/fsnotify/fsnotify v1.10.1 // indirect
-	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
 	github.com/go-logr/logr v1.4.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/go-playground/form/v4 v4.3.0 // indirect

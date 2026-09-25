@@ -7,7 +7,7 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/gorm v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 )
 
 require (
@@ -57,6 +57,16 @@ require (
 	github.com/mattn/go-isatty v0.0.24 // indirect
 	github.com/mattn/go-sqlite3 v1.14.50 // indirect
 	github.com/microsoft/go-mssqldb v1.11.0 // indirect
+	github.com/mimokpl/go-crud/api v1.1.1 // indirect
+	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
+	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
+	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
+	github.com/mimokpl/go-utils v1.9.1 // indirect
+	github.com/mimokpl/go-utils/mapper v1.9.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/miwin v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
+	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect
 	github.com/ncruces/go-strftime v1.0.0 // indirect
 	github.com/paulmach/orb v0.13.0 // indirect
@@ -71,15 +81,6 @@ require (
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/sirupsen/logrus v1.10.2 // indirect
 	github.com/tjfoc/gmsm v1.4.1 // indirect
-	github.com/mimokpl/go-crud/api v1.1.1 // indirect
-	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
-	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
-	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
-	github.com/mimokpl/go-utils v1.9.0 // indirect
-	github.com/mimokpl/go-utils/mapper v1.9.0 // indirect
-	github.com/mimokpl/miwin v1.1.1 // indirect
-	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
-	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
 	github.com/zeebo/xxh3 v1.1.0 // indirect
 	go.einride.tech/aip v0.86.3 // indirect
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
@@ -124,3 +125,5 @@ require (
 	modernc.org/memory v1.12.1 // indirect
 	modernc.org/sqlite v1.57.0 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

@@ -7,7 +7,7 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/mongodb v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 	go.mongodb.org/mongo-driver/v2 v2.8.2
 )
 
@@ -18,8 +18,9 @@ require (
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/mimokpl/go-crud/api v1.1.1 // indirect
 	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
-	github.com/mimokpl/go-utils v1.9.0 // indirect
-	github.com/mimokpl/go-utils/mapper v1.9.0 // indirect
+	github.com/mimokpl/go-utils v1.9.1 // indirect
+	github.com/mimokpl/go-utils/mapper v1.9.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
@@ -36,3 +37,5 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

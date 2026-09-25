@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"errors"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	clickhouseCrud "github.com/mimokpl/go-crud/clickhouse"
 	tlsUtils "github.com/mimokpl/go-utils/tls"
 

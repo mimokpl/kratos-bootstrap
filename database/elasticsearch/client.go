@@ -4,7 +4,7 @@ import (
 	"errors"
 	"os"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	elasticsearchCrud "github.com/mimokpl/go-crud/elasticsearch"
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 )

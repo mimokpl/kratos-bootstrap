@@ -3,7 +3,7 @@ package apollo
 import (
 	"strings"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 )
 
 func format(ns string) string {

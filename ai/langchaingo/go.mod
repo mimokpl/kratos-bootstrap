@@ -8,8 +8,8 @@ replace (
 )
 
 require (
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 	github.com/tmc/langchaingo v0.1.14
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
 )
 
 require (
@@ -24,6 +24,7 @@ require (
 	github.com/goph/emperror v0.17.2 // indirect
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/mitchellh/copystructure v1.2.0 // indirect
 	github.com/mitchellh/reflectwalk v1.0.2 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -43,3 +44,5 @@ require (
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

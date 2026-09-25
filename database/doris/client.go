@@ -3,7 +3,7 @@ package doris
 import (
 	"errors"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	dorisCrud "github.com/mimokpl/go-crud/doris"
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 )

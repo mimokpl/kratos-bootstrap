@@ -4,7 +4,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	"github.com/go-kratos/kratos/v3/registry"
 
 	k8s "k8s.io/client-go/kubernetes"

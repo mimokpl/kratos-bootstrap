@@ -6,8 +6,10 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../api
 
 require (
 	github.com/go-kratos/kratos/v3 v3.0.0
-	github.com/mimokpl/go-utils v1.9.0
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/go-utils v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 )
 
 require google.golang.org/protobuf v1.36.12 // indirect
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

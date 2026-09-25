@@ -10,8 +10,8 @@ replace (
 require (
 	github.com/apolloconfig/agollo/v4 v4.4.0
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/config v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/config v1.9.1
 )
 
 require (
@@ -19,6 +19,7 @@ require (
 	github.com/davecgh/go-spew v1.1.2-0.20180830191138-d8f796af33cc // indirect
 	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/go-viper/mapstructure/v2 v2.5.0 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/pelletier/go-toml/v2 v2.4.3 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/sagikazarmark/locafero v0.12.0 // indirect
@@ -33,3 +34,5 @@ require (
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

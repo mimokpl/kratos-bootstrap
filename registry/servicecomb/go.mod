@@ -14,9 +14,9 @@ require (
 	github.com/go-chassis/sc-client v0.7.0
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/gofrs/uuid v4.4.0+incompatible
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/registry v1.9.1
 	github.com/stretchr/testify v1.11.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/registry v1.9.0
 	google.golang.org/protobuf v1.36.12
 )
 
@@ -30,10 +30,13 @@ require (
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/karlseguin/ccache/v2 v2.0.8 // indirect
 	github.com/kr/text v0.2.0 // indirect
+	github.com/mimokpl/go-utils v1.9.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/patrickmn/go-cache v2.1.0+incompatible // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
-	github.com/mimokpl/go-utils v1.9.0 // indirect
 	golang.org/x/sync v0.14.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

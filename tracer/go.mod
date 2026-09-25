@@ -5,8 +5,8 @@ go 1.25.0
 replace github.com/mimokpl/kratos-bootstrap/api => ../api
 
 require (
-	github.com/mimokpl/go-utils v1.9.0
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/go-utils v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 	go.opentelemetry.io/otel v1.46.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.46.0
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc v1.46.0
@@ -36,3 +36,5 @@ require (
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

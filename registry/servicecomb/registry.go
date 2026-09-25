@@ -11,7 +11,7 @@ import (
 	"github.com/go-chassis/sc-client"
 	"github.com/gofrs/uuid"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	"github.com/go-kratos/kratos/v3/registry"
 )
 

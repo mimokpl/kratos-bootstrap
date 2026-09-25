@@ -3,7 +3,7 @@ package script_engine
 import (
 	"context"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	scriptEngine "github.com/mimokpl/go-scripts"
 )
 
@@ -17,7 +17,7 @@ var _ scriptEngine.Logger = (*KratosLogger)(nil)
 //
 // 使用方式:
 //
-//	import "github.com/go-kratos/kratos/v2/log"
+//	import log "github.com/mimokpl/kratos-bootstrap/logger"
 //	import scriptEngine "github.com/mimokpl/go-scripts"
 //
 //	kratosLogger := log.NewStdLogger(os.Stdout)

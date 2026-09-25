@@ -5,7 +5,7 @@ import (
 	"errors"
 	"time"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 
 	mongoV2 "go.mongodb.org/mongo-driver/v2/mongo"
 	optionsV2 "go.mongodb.org/mongo-driver/v2/mongo/options"

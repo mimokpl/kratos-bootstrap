@@ -12,8 +12,8 @@ replace (
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/hashicorp/consul/api v1.34.4
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/config v1.9.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/config v1.9.1
 )
 
 require (
@@ -33,9 +33,12 @@ require (
 	github.com/hashicorp/serf v0.10.4 // indirect
 	github.com/mattn/go-colorable v0.1.15 // indirect
 	github.com/mattn/go-isatty v0.0.24 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	golang.org/x/exp v0.0.0-20260824195058-e88cd73687aa // indirect
 	golang.org/x/sys v0.47.0 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

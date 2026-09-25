@@ -3,7 +3,7 @@ package influxdb
 import (
 	"errors"
 
-	"github.com/go-kratos/kratos/v2/log"
+	log "github.com/mimokpl/kratos-bootstrap/logger"
 	conf "github.com/mimokpl/kratos-bootstrap/api/gen/go/conf/v1"
 
 	influxdbCrud "github.com/mimokpl/go-crud/influxdb"

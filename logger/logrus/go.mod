@@ -4,13 +4,13 @@ go 1.25.0
 
 replace (
 	github.com/mimokpl/kratos-bootstrap/api => ../../api
-	github.com/mimokpl/kratos-bootstrap/logger => ../
+	github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger
 )
 
 require (
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	github.com/sirupsen/logrus v1.10.2
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.0
 )
 
 require (

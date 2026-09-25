@@ -9,9 +9,9 @@ replace (
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.9.0
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
-	github.com/mimokpl/kratos-bootstrap/config v1.9.0
+	github.com/mimokpl/go-utils v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/config v1.9.1
 	go.etcd.io/etcd/client/v3 v3.7.1
 	google.golang.org/grpc v1.83.2
 )
@@ -23,6 +23,7 @@ require (
 	github.com/fsnotify/fsnotify v1.10.1 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	go.etcd.io/etcd/api/v3 v3.7.1 // indirect
 	go.etcd.io/etcd/client/pkg/v3 v3.7.1 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
@@ -35,3 +36,5 @@ require (
 	google.golang.org/protobuf v1.36.12 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

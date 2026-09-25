@@ -10,8 +10,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/credentials v1.20.1
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.109.1
 	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.9.0
-	github.com/mimokpl/kratos-bootstrap/api v1.9.0
+	github.com/mimokpl/go-utils v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.1
 )
 
 require (
@@ -29,5 +29,8 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.40.1 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.47.1 // indirect
 	github.com/aws/smithy-go v1.28.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
 	google.golang.org/protobuf v1.36.12 // indirect
 )
+
+replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger
