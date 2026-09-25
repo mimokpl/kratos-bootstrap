@@ -8,14 +8,13 @@ replace (
 )
 
 require (
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/sirupsen/logrus v1.10.2
 )
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
 	go.opentelemetry.io/otel v1.46.0 // indirect
 	go.opentelemetry.io/otel/trace v1.46.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect

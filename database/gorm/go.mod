@@ -5,16 +5,15 @@ go 1.26.3
 replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
-	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/gorm v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
 )
 
 require (
 	cloud.google.com/go v0.123.0 // indirect
 	cloud.google.com/go/auth v0.23.2 // indirect
 	cloud.google.com/go/auth/oauth2adapt v0.2.8 // indirect
-	cloud.google.com/go/bigquery v1.82.0 // indirect
+	cloud.google.com/go/bigquery v1.83.0 // indirect
 	cloud.google.com/go/compute/metadata v0.9.0 // indirect
 	cloud.google.com/go/iam v1.13.0 // indirect
 	filippo.io/edwards25519 v1.2.0 // indirect
@@ -33,7 +32,7 @@ require (
 	github.com/go-faster/errors v0.8.0 // indirect
 	github.com/go-logr/logr v1.4.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
-	github.com/go-sql-driver/mysql v1.10.0 // indirect
+	github.com/go-sql-driver/mysql v1.10.1 // indirect
 	github.com/goccy/go-json v0.10.6 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
@@ -43,27 +42,27 @@ require (
 	github.com/google/s2a-go v0.1.9 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/googleapis/enterprise-certificate-proxy v0.3.21 // indirect
-	github.com/googleapis/gax-go/v2 v2.24.0 // indirect
+	github.com/googleapis/gax-go/v2 v2.24.1 // indirect
 	github.com/hashicorp/go-version v1.9.0 // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
-	github.com/jackc/pgx/v5 v5.10.0 // indirect
+	github.com/jackc/pgx/v5 v5.11.0 // indirect
 	github.com/jackc/puddle/v2 v2.2.2 // indirect
 	github.com/jinzhu/copier v0.4.0 // indirect
 	github.com/jinzhu/inflection v1.0.0 // indirect
 	github.com/jinzhu/now v1.1.5 // indirect
-	github.com/klauspost/compress v1.19.2 // indirect
+	github.com/klauspost/compress v1.20.0 // indirect
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/mattn/go-isatty v0.0.24 // indirect
-	github.com/mattn/go-sqlite3 v1.14.50 // indirect
+	github.com/mattn/go-sqlite3 v1.14.52 // indirect
 	github.com/microsoft/go-mssqldb v1.11.0 // indirect
 	github.com/mimokpl/go-crud/api v1.1.1 // indirect
 	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
 	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
 	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
-	github.com/mimokpl/go-utils v1.9.1 // indirect
-	github.com/mimokpl/go-utils/mapper v1.9.1 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/go-utils v1.9.2 // indirect
+	github.com/mimokpl/go-utils/mapper v1.9.2 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect
@@ -72,8 +71,8 @@ require (
 	github.com/paulmach/orb v0.13.0 // indirect
 	github.com/pierrec/lz4/v4 v4.1.29 // indirect
 	github.com/prometheus/client_golang v1.24.1 // indirect
-	github.com/prometheus/client_model v0.6.2 // indirect
-	github.com/prometheus/common v0.70.1 // indirect
+	github.com/prometheus/client_model v0.6.3 // indirect
+	github.com/prometheus/common v0.71.0 // indirect
 	github.com/prometheus/procfs v0.22.0 // indirect
 	github.com/redis/go-redis/v9 v9.22.0 // indirect
 	github.com/remyoudompheng/bigfft v0.0.0-20230129092748-24d4a6f8daec // indirect
@@ -91,22 +90,22 @@ require (
 	go.opentelemetry.io/otel/trace v1.46.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.5 // indirect
-	golang.org/x/crypto v0.55.0 // indirect
+	golang.org/x/crypto v0.56.0 // indirect
 	golang.org/x/exp v0.0.0-20260824195058-e88cd73687aa // indirect
 	golang.org/x/mod v0.40.0 // indirect
 	golang.org/x/net v0.58.0 // indirect
 	golang.org/x/oauth2 v0.36.0 // indirect
 	golang.org/x/sync v0.22.0 // indirect
 	golang.org/x/sys v0.47.0 // indirect
-	golang.org/x/telemetry v0.0.0-20260828145429-86cb5733f5b7 // indirect
+	golang.org/x/telemetry v0.0.0-20260902144106-3ef544be8421 // indirect
 	golang.org/x/text v0.41.0 // indirect
 	golang.org/x/time v0.15.0 // indirect
 	golang.org/x/tools v0.49.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
-	google.golang.org/api v0.295.0 // indirect
-	google.golang.org/genproto v0.0.0-20260825221802-da73d73af1c5 // indirect
-	google.golang.org/genproto/googleapis/api v0.0.0-20260825221802-da73d73af1c5 // indirect
-	google.golang.org/genproto/googleapis/rpc v0.0.0-20260825221802-da73d73af1c5 // indirect
+	google.golang.org/api v0.297.0 // indirect
+	google.golang.org/genproto v0.0.0-20260908043556-f8649ddbbfe6 // indirect
+	google.golang.org/genproto/googleapis/api v0.0.0-20260908043556-f8649ddbbfe6 // indirect
+	google.golang.org/genproto/googleapis/rpc v0.0.0-20260908043556-f8649ddbbfe6 // indirect
 	google.golang.org/grpc v1.83.2 // indirect
 	google.golang.org/protobuf v1.36.12 // indirect
 	gorm.io/driver/bigquery v1.2.1 // indirect
@@ -120,10 +119,10 @@ require (
 	gorm.io/plugin/dbresolver v1.6.2 // indirect
 	gorm.io/plugin/opentelemetry v0.1.16 // indirect
 	gorm.io/plugin/prometheus v0.1.0 // indirect
-	modernc.org/libc v1.75.6 // indirect
+	modernc.org/libc v1.75.7 // indirect
 	modernc.org/mathutil v1.7.1 // indirect
 	modernc.org/memory v1.12.1 // indirect
-	modernc.org/sqlite v1.57.0 // indirect
+	modernc.org/sqlite v1.58.0 // indirect
 )
 
 replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger

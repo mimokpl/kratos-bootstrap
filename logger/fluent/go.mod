@@ -9,13 +9,12 @@ replace (
 
 require (
 	github.com/fluent/fluent-logger-golang v1.10.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 )
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
 	github.com/philhofer/fwd v1.2.0 // indirect
 	github.com/tinylib/msgp v1.6.4 // indirect
 	go.opentelemetry.io/otel v1.46.0 // indirect

@@ -56,10 +56,10 @@ github.com/mattn/go-isatty v0.0.24 h1:tGZZoVgT/KiqK1c8ocVLeDS8BSWMRd47J3Lbz7vsRe
 github.com/mattn/go-isatty v0.0.24/go.mod h1:nMCL3Zebbrt45jsMDgnfIwz6ydEQApk5oEI3HqDio6A=
 github.com/mattn/go-runewidth v0.0.28 h1:rPyg2ybwEKPebvpzVWe1gKBkH8EQFkxO4Y0hjBeLaBU=
 github.com/mattn/go-runewidth v0.0.28/go.mod h1:3qAiGCV4Koz/yuveO58qUefmUTRm8r0IGEXZ9jeHp/8=
-github.com/mimokpl/go-utils v1.9.0 h1:bvqgVEYEl+J1xYZFDEYtjMdUPK0mJx3rDGmveTmmv3U=
-github.com/mimokpl/go-utils v1.9.0/go.mod h1:IVSxspr2uSBKmU66LYO6E515VfHX3PBVofAYwFOOeCw=
-github.com/mimokpl/go-utils/id v1.9.0 h1:FQIBrhDthbhMzgtJ7PzeV5SkOYMJrne0k1BYjM5kaLM=
-github.com/mimokpl/go-utils/id v1.9.0/go.mod h1:jpa59QoOi29+E0+dsV770l+Prz3feWPUPn8TEIKmOtU=
+github.com/mimokpl/go-utils v1.9.1 h1:3JuHRNz+zpG0UbBSbM4ddxN0E1LMdWJcOImpHMaem5U=
+github.com/mimokpl/go-utils v1.9.1/go.mod h1:H7AXvKkDzMq0B7+ySuQRu+9t9G+Bopg9WQhL3fp4e1c=
+github.com/mimokpl/go-utils/id v1.9.1 h1:2oLiqPOj6LBkpXIUz25SKVgH9IuYc7wKZsCzMpHxYYg=
+github.com/mimokpl/go-utils/id v1.9.1/go.mod h1:ZlQ4d99VDGe96hTmDeBiBVtmLWXaFRmOtz1XC1QcL1Y=
 github.com/olekukonko/cat v0.0.0-20250911104152-50322a0618f6 h1:zrbMGy9YXpIeTnGj4EljqMiZsIcE09mmF8XsD5AYOJc=
 github.com/olekukonko/cat v0.0.0-20250911104152-50322a0618f6/go.mod h1:rEKTHC9roVVicUIfZK7DYrdIoM0EOr8mK1Hj5s3JjH0=
 github.com/olekukonko/errors v1.3.0 h1:teJvgLGUEqMzBUms+Dj3/3szNqCG/Jdw9iDbum8fR6U=

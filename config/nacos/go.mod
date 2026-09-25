@@ -8,14 +8,18 @@ replace (
 )
 
 require (
-	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/config v1.9.1
+	github.com/go-kratos/kratos/v3 v3.0.0
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/config v1.9.2
 	github.com/nacos-group/nacos-sdk-go/v2 v2.3.5
 )
 
 require (
-	dario.cat/mergo v1.0.2 // indirect
+	go.opentelemetry.io/otel v1.46.0 // indirect
+	go.opentelemetry.io/otel/trace v1.46.0 // indirect
+)
+
+require (
 	github.com/alibabacloud-go/alibabacloud-gateway-pop v0.1.4 // indirect
 	github.com/alibabacloud-go/alibabacloud-gateway-spi v0.0.5 // indirect
 	github.com/alibabacloud-go/darabonba-array v0.1.0 // indirect
@@ -47,7 +51,7 @@ require (
 	github.com/gorilla/websocket v1.5.3 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 // indirect

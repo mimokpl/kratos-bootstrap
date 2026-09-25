@@ -109,7 +109,7 @@ func (c *Client) createMongodbClient(cfg *conf.Bootstrap) error {
 
 	cli, err := mongoV2.Connect(opts...)
 	if err != nil {
-		c.log.Errorf("failed to create mongodb client: %v", err)
+		c.log.Errorf(context.Background(), "failed to create mongodb client: %v", err)
 		return err
 	}
 
@@ -128,14 +128,14 @@ func (c *Client) createMongodbClient(cfg *conf.Bootstrap) error {
 // Close 关闭MongoDB客户端
 func (c *Client) Close() {
 	if c.cli == nil {
-		c.log.Warn("mongodb client is already closed or not initialized")
+		c.log.Warn(context.Background(), "mongodb client is already closed or not initialized")
 		return
 	}
 
 	if err := c.cli.Disconnect(context.Background()); err != nil {
-		c.log.Errorf("failed to disconnect mongodb client: %v", err)
+		c.log.Errorf(context.Background(), "failed to disconnect mongodb client: %v", err)
 	} else {
-		c.log.Info("mongodb client disconnected successfully")
+		c.log.Info(context.Background(), "mongodb client disconnected successfully")
 	}
 }
 
@@ -145,9 +145,9 @@ func (c *Client) CheckConnect() {
 	defer cancel()
 
 	if err := c.cli.Ping(ctx, nil); err != nil {
-		c.log.Errorf("failed to ping mongodb: %v", err)
+		c.log.Errorf(ctx, "failed to ping mongodb: %v", err)
 	} else {
-		c.log.Info("mongodb client is connected")
+		c.log.Info(ctx, "mongodb client is connected")
 	}
 }
 
@@ -182,12 +182,12 @@ func (c *Client) Find(ctx context.Context, collection string, filter interface{}
 
 	cursor, err := c.cli.Database(c.database).Collection(collection).Find(ctx, filter)
 	if err != nil {
-		c.log.Errorf("failed to find documents in collection %s: %v", collection, err)
+		c.log.Errorf(ctx, "failed to find documents in collection %s: %v", collection, err)
 		return err
 	}
 	defer func(cursor *mongoV2.Cursor, ctx context.Context) {
 		if err = cursor.Close(ctx); err != nil {
-			c.log.Errorf("failed to close cursor: %v", err)
+			c.log.Errorf(ctx, "failed to close cursor: %v", err)
 		}
 	}(cursor, ctx)
 

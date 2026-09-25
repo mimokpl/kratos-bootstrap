@@ -22,22 +22,22 @@ func NewZapLogger(zlog *zap.Logger) *Logger {
 
 // Debug 输出 DEBUG 级别日志。
 func (l *Logger) Debug(_ context.Context, msg string, keyvals ...any) {
-	l.log.Debug(msg, l.toFields(keyvals)...)
+	l.log.Debug(context.Background(), msg, l.toFields(keyvals)...)
 }
 
 // Info 输出 INFO 级别日志。
 func (l *Logger) Info(_ context.Context, msg string, keyvals ...any) {
-	l.log.Info(msg, l.toFields(keyvals)...)
+	l.log.Info(context.Background(), msg, l.toFields(keyvals)...)
 }
 
 // Warn 输出 WARN 级别日志。
 func (l *Logger) Warn(_ context.Context, msg string, keyvals ...any) {
-	l.log.Warn(msg, l.toFields(keyvals)...)
+	l.log.Warn(context.Background(), msg, l.toFields(keyvals)...)
 }
 
 // Error 输出 ERROR 级别日志。
 func (l *Logger) Error(_ context.Context, msg string, keyvals ...any) {
-	l.log.Error(msg, l.toFields(keyvals)...)
+	l.log.Error(context.Background(), msg, l.toFields(keyvals)...)
 }
 
 // With 返回附加了指定 key-value 对的新 Logger 实例。

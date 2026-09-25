@@ -13,13 +13,13 @@ replace (
 require (
 	github.com/go-kratos/kratos/v3 v3.0.0
 	github.com/google/subcommands v1.2.0
-	github.com/mimokpl/go-utils v1.9.1
-	github.com/mimokpl/go-utils/id v1.9.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/config v1.9.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
-	github.com/mimokpl/kratos-bootstrap/registry v1.9.1
-	github.com/mimokpl/kratos-bootstrap/tracer v1.9.1
+	github.com/mimokpl/go-utils v1.9.2
+	github.com/mimokpl/go-utils/id v1.9.2
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/config v1.9.2
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
+	github.com/mimokpl/kratos-bootstrap/registry v1.9.2
+	github.com/mimokpl/kratos-bootstrap/tracer v1.9.2
 	github.com/olekukonko/tablewriter v1.1.4
 	github.com/spf13/cobra v1.10.2
 	github.com/stretchr/testify v1.12.1

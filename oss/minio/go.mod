@@ -5,8 +5,8 @@ go 1.25.0
 replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
-	github.com/mimokpl/go-utils v1.9.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/go-utils v1.9.2
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
 	github.com/minio/minio-go/v7 v7.3.0
 )
 
@@ -22,7 +22,7 @@ require (
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/klauspost/cpuid/v2 v2.4.0 // indirect
 	github.com/klauspost/crc32 v1.3.0 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/minio/crc64nvme v1.1.1 // indirect
 	github.com/minio/md5-simd v1.1.2 // indirect
 	github.com/philhofer/fwd v1.2.0 // indirect

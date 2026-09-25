@@ -9,9 +9,14 @@ require (
 	github.com/aws/aws-sdk-go-v2/config v1.33.1
 	github.com/aws/aws-sdk-go-v2/credentials v1.20.1
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.109.1
-	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.9.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/go-utils v1.9.2
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+)
+
+require (
+	github.com/cespare/xxhash/v2 v2.3.0 // indirect
+	go.opentelemetry.io/otel v1.46.0 // indirect
+	go.opentelemetry.io/otel/trace v1.46.0 // indirect
 )
 
 require (
@@ -29,7 +34,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/ssooidc v1.40.1 // indirect
 	github.com/aws/aws-sdk-go-v2/service/sts v1.47.1 // indirect
 	github.com/aws/smithy-go v1.28.1 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	google.golang.org/protobuf v1.36.12 // indirect
 )
 

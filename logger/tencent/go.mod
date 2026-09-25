@@ -8,18 +8,18 @@ replace (
 )
 
 require (
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/tencentcloud/tencentcloud-cls-sdk-go v1.0.15
 	google.golang.org/protobuf v1.36.12
 )
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
 	github.com/golang/protobuf v1.5.4 // indirect
 	github.com/golang/snappy v1.0.0 // indirect
 	github.com/klauspost/compress v1.19.2 // indirect
+	github.com/kr/pretty v0.3.1 // indirect
 	github.com/pierrec/lz4 v2.6.1+incompatible // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
 	go.opentelemetry.io/otel v1.46.0 // indirect

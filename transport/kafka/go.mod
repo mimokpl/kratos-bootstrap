@@ -5,14 +5,15 @@ go 1.25.3
 replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
-	github.com/go-kratos/kratos/v2 v2.9.2
-	github.com/mimokpl/go-utils v1.9.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-transport/broker v1.9.1
-	github.com/mimokpl/kratos-transport/broker/kafka v1.9.1
-	github.com/mimokpl/kratos-transport/transport/kafka v1.9.1
+	github.com/mimokpl/go-utils v1.9.2
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-transport/broker v1.9.2
+	github.com/mimokpl/kratos-transport/broker/kafka v1.9.2
+	github.com/mimokpl/kratos-transport/transport/kafka v1.9.2
 	github.com/segmentio/kafka-go v0.4.51
 )
+
+require github.com/go-kratos/kratos/v3 v3.0.0 // indirect
 
 require (
 	github.com/cenkalti/backoff/v5 v5.0.3 // indirect
@@ -24,10 +25,10 @@ require (
 	github.com/grpc-ecosystem/grpc-gateway/v2 v2.30.0 // indirect
 	github.com/klauspost/compress v1.19.2 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
-	github.com/mimokpl/kratos-transport/tracing v1.9.1 // indirect
-	github.com/mimokpl/kratos-transport/transport v1.9.1 // indirect
-	github.com/mimokpl/kratos-transport/transport/keepalive v1.9.1 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
+	github.com/mimokpl/kratos-transport/tracing v1.9.2 // indirect
+	github.com/mimokpl/kratos-transport/transport v1.9.2 // indirect
+	github.com/mimokpl/kratos-transport/transport/keepalive v1.9.2 // indirect
 	github.com/pierrec/lz4/v4 v4.1.29 // indirect
 	github.com/xdg-go/pbkdf2 v1.0.0 // indirect
 	github.com/xdg-go/scram v1.2.0 // indirect

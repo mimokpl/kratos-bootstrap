@@ -5,21 +5,20 @@ go 1.26.3
 replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
-	github.com/go-kratos/kratos/v2 v2.9.2
 	github.com/mimokpl/go-crud/elasticsearch v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
 )
 
 require (
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/elastic/elastic-transport-go/v8 v8.11.0 // indirect
-	github.com/elastic/go-elasticsearch/v9 v9.5.1 // indirect
+	github.com/elastic/go-elasticsearch/v9 v9.5.2 // indirect
 	github.com/go-logr/logr v1.4.4 // indirect
 	github.com/go-logr/stdr v1.2.2 // indirect
 	github.com/google/gnostic v0.7.1 // indirect
 	github.com/google/gnostic-models v0.7.1 // indirect
 	github.com/mimokpl/go-crud/api v1.1.1 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect

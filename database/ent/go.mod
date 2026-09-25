@@ -7,7 +7,7 @@ replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 require (
 	entgo.io/ent v0.14.6
 	github.com/mimokpl/go-crud/entgo v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
 )
 
 require (
@@ -31,9 +31,9 @@ require (
 	github.com/mimokpl/go-crud/cache v1.1.1 // indirect
 	github.com/mimokpl/go-crud/pagination v1.1.1 // indirect
 	github.com/mimokpl/go-crud/viewer v1.1.1 // indirect
-	github.com/mimokpl/go-utils v1.9.1 // indirect
-	github.com/mimokpl/go-utils/mapper v1.9.1 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/go-utils v1.9.2 // indirect
+	github.com/mimokpl/go-utils/mapper v1.9.2 // indirect
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	github.com/mimokpl/miwin v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding v1.1.1 // indirect
 	github.com/mimokpl/miwin-plugins/encoding/json v1.1.1 // indirect

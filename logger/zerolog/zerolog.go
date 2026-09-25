@@ -22,22 +22,22 @@ func NewZerologLogger(logger *zerolog.Logger) *Logger {
 
 // Debug 输出 DEBUG 级别日志。
 func (l *Logger) Debug(_ context.Context, msg string, keyvals ...any) {
-	l.logEvent(l.log.Debug(), msg, keyvals)
+	l.logEvent(l.log.Debug(context.Background(), ), msg, keyvals)
 }
 
 // Info 输出 INFO 级别日志。
 func (l *Logger) Info(_ context.Context, msg string, keyvals ...any) {
-	l.logEvent(l.log.Info(), msg, keyvals)
+	l.logEvent(l.log.Info(context.Background(), ), msg, keyvals)
 }
 
 // Warn 输出 WARN 级别日志。
 func (l *Logger) Warn(_ context.Context, msg string, keyvals ...any) {
-	l.logEvent(l.log.Warn(), msg, keyvals)
+	l.logEvent(l.log.Warn(context.Background(), ), msg, keyvals)
 }
 
 // Error 输出 ERROR 级别日志。
 func (l *Logger) Error(_ context.Context, msg string, keyvals ...any) {
-	l.logEvent(l.log.Error(), msg, keyvals)
+	l.logEvent(l.log.Error(context.Background(), ), msg, keyvals)
 }
 
 // With 返回附加了指定 key-value 对的新 Logger 实例。

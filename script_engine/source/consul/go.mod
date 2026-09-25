@@ -9,13 +9,13 @@ replace (
 
 require (
 	github.com/mimokpl/go-scripts v1.1.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
-	github.com/mimokpl/kratos-bootstrap/script_engine v1.9.1
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
+	github.com/mimokpl/kratos-bootstrap/script_engine v1.9.2
 )
 
 require (
 	github.com/go-kratos/kratos/v2 v2.9.2 // indirect
-	github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+	github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 	google.golang.org/protobuf v1.36.12 // indirect
 )
 

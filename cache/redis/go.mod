@@ -5,8 +5,8 @@ go 1.25.0
 replace github.com/mimokpl/kratos-bootstrap/api => ../../api
 
 require (
-	github.com/mimokpl/go-utils v1.9.1
-	github.com/mimokpl/kratos-bootstrap/api v1.9.1
+	github.com/mimokpl/go-utils v1.9.2
+	github.com/mimokpl/kratos-bootstrap/api v1.9.2
 	github.com/redis/go-redis/extra/redisotel/v9 v9.22.0
 	github.com/redis/go-redis/v9 v9.22.0
 )
@@ -25,6 +25,6 @@ require (
 	google.golang.org/protobuf v1.36.12 // indirect
 )
 
-require github.com/mimokpl/kratos-bootstrap/logger v1.9.1
+require github.com/mimokpl/kratos-bootstrap/logger v1.9.2
 
 replace github.com/mimokpl/kratos-bootstrap/logger => /Users/sec/codes/mimokpl/mimox/relys/kratos-bootstrap/logger
